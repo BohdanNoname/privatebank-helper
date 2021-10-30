@@ -1,7 +1,7 @@
 package com.nedashkivskyi.privatebankhelper.di
 
-import com.nedashkivskyi.privatebankhelper.data.repository.network.ApiRepositoryImpl
-import com.nedashkivskyi.privatebankhelper.data.repository.network.ApiService
+import com.nedashkivskyi.privatebankhelper.data.repository.DataRepositoryImpl
+import com.nedashkivskyi.privatebankhelper.data.network.ApiService
 import com.nedashkivskyi.privatebankhelper.utils.Constants
 import com.nedashkivskyi.privatebankhelper.utils.DispatcherProvider
 import dagger.Module
@@ -27,12 +27,6 @@ object NetworkModule {
             .baseUrl(Constants.ApiPrivatBankBaseUrl)
             .build()
             .create(ApiService::class.java)
-
-
-    @Provides
-    @Singleton
-    fun providesApiRepository(apiService: ApiService): ApiRepositoryImpl =
-        ApiRepositoryImpl(apiService = apiService)
 
     @Provides
     @Singleton

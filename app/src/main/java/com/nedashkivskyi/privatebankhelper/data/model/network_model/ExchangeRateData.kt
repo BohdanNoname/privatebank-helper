@@ -1,8 +1,6 @@
-package com.nedashkivskyi.privatebankhelper.data.model
-
+package com.nedashkivskyi.privatebankhelper.data.model.network_model
 
 import kotlinx.serialization.SerialName
-
 import kotlinx.serialization.Serializable
 
 @Serializable
