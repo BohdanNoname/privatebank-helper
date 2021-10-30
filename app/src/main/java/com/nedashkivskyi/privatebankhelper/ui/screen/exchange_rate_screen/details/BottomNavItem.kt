@@ -1,4 +1,4 @@
-package com.nedashkivskyi.privatebankhelper.models
+package com.nedashkivskyi.privatebankhelper.ui.screen.exchange_rate_screen.details
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

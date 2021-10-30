@@ -1,9 +1,10 @@
 package com.nedashkivskyi.privatebankhelper.di
 
-import com.nedashkivskyi.privatebankhelper.network.ApiRepositoryImpl
-import com.nedashkivskyi.privatebankhelper.network.ApiService
-import com.nedashkivskyi.privatebankhelper.utils.Constants
-import com.nedashkivskyi.privatebankhelper.utils.DispatcherProvider
+import com.nedashkivskyi.privatebankhelper.data.repository.api_repository.ApiRepositoryImpl
+import com.nedashkivskyi.privatebankhelper.data.repository.api_repository.ApiService
+import com.nedashkivskyi.privatebankhelper.common.Constants
+import com.nedashkivskyi.privatebankhelper.common.DispatcherProvider
+import com.nedashkivskyi.privatebankhelper.data.use_case.get_exchange_rate.GetExchangeRateUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,6 +34,7 @@ object NetworkModule {
     @Singleton
     fun providesApiRepository(apiService: ApiService): ApiRepositoryImpl =
         ApiRepositoryImpl(apiService = apiService)
+
 
     @Provides
     @Singleton

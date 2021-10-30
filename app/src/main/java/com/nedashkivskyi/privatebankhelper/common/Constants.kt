@@ -1,4 +1,8 @@
-package com.nedashkivskyi.privatebankhelper.utils
+package com.nedashkivskyi.privatebankhelper.common
+
+import android.annotation.SuppressLint
+import java.text.SimpleDateFormat
+import java.util.*
 
 sealed class Constants {
     companion object{
@@ -8,6 +12,9 @@ sealed class Constants {
 
         const val ApiPrivatBankBaseUrl = "https://api.privatbank.ua/p24api/"
         const val LoadingError: String = "Во время загрузки произошла ошибка!"
+
+        @SuppressLint("SimpleDateFormat")
+        val CurrentDate: String =  SimpleDateFormat("dd.M.yyyy").format(Date())
     }
 
     sealed class ApiPrivatBankSearchFormat {

@@ -23,14 +23,14 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.nedashkivskyi.privatebankhelper.models.BottomNavItem
+import com.nedashkivskyi.privatebankhelper.ui.screen.exchange_rate_screen.details.BottomNavItem
 import com.nedashkivskyi.privatebankhelper.ui.screen.BanksLocationScreen
 import com.nedashkivskyi.privatebankhelper.ui.screen.CashpointLocationScreen
-import com.nedashkivskyi.privatebankhelper.ui.screen.ExchangeRateScreen
-import com.nedashkivskyi.privatebankhelper.utils.Constants
+import com.nedashkivskyi.privatebankhelper.ui.screen.exchange_rate_screen.ExchangeRateScreen
+import com.nedashkivskyi.privatebankhelper.common.Constants
 import com.nedashkivskyi.privatebankhelper.ui.theme.PrivateBankHelperTheme
-import com.nedashkivskyi.privatebankhelper.ui.viewModel.ExchangeRateViewModel
-import com.nedashkivskyi.privatebankhelper.utils.NavigationDestination
+import com.nedashkivskyi.privatebankhelper.ui.screen.exchange_rate_screen.view_model.ExchangeRateViewModel
+import com.nedashkivskyi.privatebankhelper.ui.screen.NavigationDestination
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

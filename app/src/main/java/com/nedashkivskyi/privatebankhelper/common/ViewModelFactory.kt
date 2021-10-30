@@ -1,4 +1,4 @@
-package com.nedashkivskyi.privatebankhelper.utils
+package com.nedashkivskyi.privatebankhelper.common
 
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.ViewModel

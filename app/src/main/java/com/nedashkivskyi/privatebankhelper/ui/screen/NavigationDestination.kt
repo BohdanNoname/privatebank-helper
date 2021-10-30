@@ -1,4 +1,6 @@
-package com.nedashkivskyi.privatebankhelper.utils
+package com.nedashkivskyi.privatebankhelper.ui.screen
+
+import com.nedashkivskyi.privatebankhelper.common.Constants
 
 sealed class NavigationDestination(val destination:String){
     object CurrencyRateScreen: NavigationDestination(Constants.CurrencyRate)

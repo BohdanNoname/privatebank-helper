@@ -6,7 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.nedashkivskyi.privatebankhelper.utils.Constants
+import com.nedashkivskyi.privatebankhelper.common.Constants
 
 @Composable
 fun BanksLocationScreen(){
