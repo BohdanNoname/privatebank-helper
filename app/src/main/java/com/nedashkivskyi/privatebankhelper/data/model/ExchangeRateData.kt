@@ -1,4 +1,4 @@
-package com.nedashkivskyi.privatebankhelper.models
+package com.nedashkivskyi.privatebankhelper.data.model
 
 
 import kotlinx.serialization.SerialName

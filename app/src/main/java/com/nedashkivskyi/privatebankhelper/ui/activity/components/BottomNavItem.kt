@@ -1,4 +1,4 @@
-package com.nedashkivskyi.privatebankhelper.models
+package com.nedashkivskyi.privatebankhelper.ui.activity.components
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

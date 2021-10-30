@@ -1,4 +1,4 @@
-package com.nedashkivskyi.privatebankhelper.ui.screen
+package com.nedashkivskyi.privatebankhelper.ui.screen.banks_location
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight

@@ -1,11 +1,10 @@
-package com.nedashkivskyi.privatebankhelper.network
+package com.nedashkivskyi.privatebankhelper.data.repository.network
 
-import com.nedashkivskyi.privatebankhelper.models.ExchangeRateData
+import com.nedashkivskyi.privatebankhelper.data.model.ExchangeRateData
 import com.nedashkivskyi.privatebankhelper.utils.Constants
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface ApiService {
 

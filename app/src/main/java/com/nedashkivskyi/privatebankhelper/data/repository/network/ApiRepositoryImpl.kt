@@ -1,7 +1,7 @@
-package com.nedashkivskyi.privatebankhelper.network
+package com.nedashkivskyi.privatebankhelper.data.repository.network
 
-import com.nedashkivskyi.privatebankhelper.models.ExchangeRateData
-import com.nedashkivskyi.privatebankhelper.network.ApiService
+import com.nedashkivskyi.privatebankhelper.data.model.ExchangeRateData
+import com.nedashkivskyi.privatebankhelper.utils.Constants
 import com.nedashkivskyi.privatebankhelper.utils.Resource
 import javax.inject.Inject
 
@@ -9,7 +9,9 @@ class ApiRepositoryImpl @Inject constructor(
     private val apiService: ApiService
     ): ApiRepository {
 
-    override suspend fun getExchangeRate(format: String, date: String): Resource<ExchangeRateData> {
+    private val format: String = Constants.ApiPrivatBankSearchFormat.ExchangeRatesJson
+
+    override suspend fun getExchangeRate(date: String): Resource<ExchangeRateData> {
         return try {
             val response = apiService.getExchangeRate(format = format, date = date)
             val result = response.body()
