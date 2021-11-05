@@ -1,6 +1,5 @@
 package com.nedashkivskyi.privatebankhelper.di
 
-import com.nedashkivskyi.privatebankhelper.data.repository.DataRepositoryImpl
 import com.nedashkivskyi.privatebankhelper.data.network.ApiService
 import com.nedashkivskyi.privatebankhelper.utils.Constants
 import com.nedashkivskyi.privatebankhelper.utils.DispatcherProvider

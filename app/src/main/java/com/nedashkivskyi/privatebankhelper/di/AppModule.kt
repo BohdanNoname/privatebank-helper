@@ -1,9 +1,7 @@
 package com.nedashkivskyi.privatebankhelper.di
 
-import com.nedashkivskyi.privatebankhelper.data.db.DaoExchangeRate
-import com.nedashkivskyi.privatebankhelper.data.db.DataBaseExchangeRate
 import com.nedashkivskyi.privatebankhelper.data.network.ApiService
-import com.nedashkivskyi.privatebankhelper.data.repository.DataRepositoryImpl
+import com.nedashkivskyi.privatebankhelper.data.repository.RemoteDataSourceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,10 +14,6 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providesDataRepository(
-        apiService: ApiService,
-        dataBaseExchangeRate: DataBaseExchangeRate
-    ): DataRepositoryImpl =
-        DataRepositoryImpl(apiService = apiService, dataBaseExchangeRate = dataBaseExchangeRate)
-
+    fun providesDataRepository(apiService: ApiService): RemoteDataSourceImpl =
+        RemoteDataSourceImpl(apiService = apiService)
 }

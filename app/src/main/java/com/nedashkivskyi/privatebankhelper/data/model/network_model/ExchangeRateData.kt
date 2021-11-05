@@ -21,7 +21,7 @@ data class ExchangeRateData(
         @SerialName("baseCurrency")
         var baseCurrency: String,
         @SerialName("currency")
-        var currency: String,
+        var currency: String?,
         @SerialName("purchaseRate")
         var purchaseRate: Double,
         @SerialName("purchaseRateNB")
@@ -63,6 +63,4 @@ data class ExchangeRateData(
                 " date='$date'," +
                 " exchangeRate=$exchangeRate)"
     }
-
-
 }

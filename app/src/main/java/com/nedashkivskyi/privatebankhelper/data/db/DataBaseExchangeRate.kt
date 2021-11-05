@@ -12,7 +12,7 @@ import com.nedashkivskyi.privatebankhelper.data.model.db_model.EntityExchangeRat
     version = 1,
     exportSchema = false
 )
-public abstract class DataBaseExchangeRate: RoomDatabase() {
+abstract class DataBaseExchangeRate: RoomDatabase() {
 
     abstract fun daoExchangeRate(): DaoExchangeRate
 

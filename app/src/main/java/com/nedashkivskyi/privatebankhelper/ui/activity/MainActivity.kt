@@ -5,12 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -23,6 +24,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.nedashkivskyi.privatebankhelper.R
 import com.nedashkivskyi.privatebankhelper.ui.activity.components.BottomNavItem
 import com.nedashkivskyi.privatebankhelper.ui.screen.banks_location.BanksLocationScreen
 import com.nedashkivskyi.privatebankhelper.ui.screen.cashpoint_location.CashpointLocationScreen
@@ -47,19 +49,19 @@ class MainActivity : ComponentActivity() {
                     bottomBar = {
                         BottomNavigationBar(items = listOf(
                             BottomNavItem(
-                                name = Constants.CashpointLocation,
+                                name = "ATM",
                                 route = Constants.CashpointLocation,
-                                icon = Icons.Default.Home
+                                icon = painterResource(id = R.drawable.atm)
                             ),
                             BottomNavItem(
-                                name = Constants.BanksLocation,
+                                name = "Banks",
                                 route = Constants.BanksLocation,
-                                icon = Icons.Default.Notifications
+                                icon = painterResource(id = R.drawable.bank)
                             ),
                             BottomNavItem(
-                                name = Constants.CurrencyRate,
+                                name = "Currency Rate",
                                 route = Constants.CurrencyRate,
-                                icon = Icons.Default.Settings
+                                icon = painterResource(id = R.drawable.currency_rate)
                             )
                         ), navController = navController, onItemClick = {
                             navController.navigate(it.route)
@@ -117,15 +119,14 @@ fun BottomNavigationBar(
                             BadgeBox(
                                 badgeContent = { Text(text = item.badgeCount.toString()) }
                             ) {
-                                Icon(
-                                    imageVector = item.icon,
-                                    contentDescription = item.name
-                                )
+                                Text(text = item.name)
                             }
                         } else {
                             Icon(
-                                imageVector = item.icon,
-                                contentDescription = item.name
+                                painter = item.icon,
+                                contentDescription = item.name,
+                                modifier = Modifier.
+                                        size(30.dp)
                             )
                         }
                         if (selected){

@@ -1,6 +1,7 @@
 package com.nedashkivskyi.privatebankhelper.ui.screen.exchange_rate
 
 import android.annotation.SuppressLint
+import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
 import androidx.compose.material.Text
@@ -26,7 +27,11 @@ fun ExchangeRateScreen(viewModel: ExchangeRateViewModel) {
         is ExchangeEvent.Loading ->
             CreateColumn(viewModel = viewModel, text = state.isLoading.toString())
         is ExchangeEvent.Error ->
+        {
             CreateColumn(viewModel = viewModel, text = state.errorMessage)
+            var e = state.errorMessage
+            Log.d(TAG, "ExchangeRateScreen: $e")
+        }
         is ExchangeEvent.Empty ->
             CreateColumn(viewModel = viewModel, text = "Empty")
     }

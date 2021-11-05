@@ -1,10 +1,7 @@
 package com.nedashkivskyi.privatebankhelper.di
 
 import android.content.Context
-import com.nedashkivskyi.privatebankhelper.data.db.DaoExchangeRate
 import com.nedashkivskyi.privatebankhelper.data.db.DataBaseExchangeRate
-import com.nedashkivskyi.privatebankhelper.data.repository.DataRepositoryImpl
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
