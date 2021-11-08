@@ -1,6 +1,7 @@
 package com.nedashkivskyi.privatebankhelper.di
 
 import com.nedashkivskyi.privatebankhelper.data.network.ApiService
+import com.nedashkivskyi.privatebankhelper.data.repository.remote.RemoteDataSourceImpl
 import com.nedashkivskyi.privatebankhelper.utils.Constants
 import com.nedashkivskyi.privatebankhelper.utils.DispatcherProvider
 import dagger.Module
@@ -43,4 +44,9 @@ object NetworkModule {
         override fun unconfined(): CoroutineDispatcher =
             Dispatchers.Unconfined
     }
+
+    @Provides
+    @Singleton
+    fun providesRemoteDataSource(apiService: ApiService): RemoteDataSourceImpl =
+        RemoteDataSourceImpl(apiService = apiService)
 }

@@ -1,19 +1,22 @@
 package com.nedashkivskyi.privatebankhelper.di
 
 import com.nedashkivskyi.privatebankhelper.data.network.ApiService
-import com.nedashkivskyi.privatebankhelper.data.repository.RemoteDataSourceImpl
+import com.nedashkivskyi.privatebankhelper.data.repository.ExchangeRateRepository
+import com.nedashkivskyi.privatebankhelper.data.repository.local.LocalDataSourceImpl
+import com.nedashkivskyi.privatebankhelper.data.repository.remote.RemoteDataSourceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-@Module()
+@Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-    @Provides
-    @Singleton
-    fun providesDataRepository(apiService: ApiService): RemoteDataSourceImpl =
-        RemoteDataSourceImpl(apiService = apiService)
+    fun providesExchangeRateRepository(
+        localDataSourceImpl: LocalDataSourceImpl,
+        remoteDataSourceImpl: RemoteDataSourceImpl
+    ): ExchangeRateRepository =
+        ExchangeRateRepository(local = localDataSourceImpl, remote = remoteDataSourceImpl)
 }

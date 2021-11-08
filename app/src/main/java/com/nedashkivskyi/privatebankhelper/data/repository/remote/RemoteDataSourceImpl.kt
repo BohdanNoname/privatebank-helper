@@ -1,7 +1,6 @@
-package com.nedashkivskyi.privatebankhelper.data.repository
+package com.nedashkivskyi.privatebankhelper.data.repository.remote
 
 import com.nedashkivskyi.privatebankhelper.data.model.network_model.ExchangeRateData
-import com.nedashkivskyi.privatebankhelper.data.network.ApiRepository
 import com.nedashkivskyi.privatebankhelper.data.network.ApiService
 import com.nedashkivskyi.privatebankhelper.utils.Constants
 import com.nedashkivskyi.privatebankhelper.utils.Resource

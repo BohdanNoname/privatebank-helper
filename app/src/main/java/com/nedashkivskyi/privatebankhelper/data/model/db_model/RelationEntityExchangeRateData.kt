@@ -4,7 +4,7 @@ import androidx.room.Embedded
 import androidx.room.Relation
 
 
-data class EntityCurrencyData (
+data class RelationEntityExchangeRateData (
     @Embedded
     val data: EntityExchangeRateData,
     @Relation(

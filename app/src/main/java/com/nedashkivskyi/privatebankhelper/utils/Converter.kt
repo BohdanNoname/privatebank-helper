@@ -9,7 +9,7 @@ object Converter {
         return EntityExchangeRateData(dataId = 0, date = exchangeRateData.date)
     }
 
-    fun convertToEntityExchangeRate(exchangeRateList: List<ExchangeRateData.ExchangeRate>): List<EntityExchangeRate> {
+    fun convertToEntityExchangeRateList(exchangeRateList: List<ExchangeRateData.ExchangeRate>): List<EntityExchangeRate> {
         val list = mutableListOf<EntityExchangeRate>()
 
         for((index, rate) in exchangeRateList.withIndex()){
